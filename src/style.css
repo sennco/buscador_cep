@@ -78,9 +78,10 @@ color: #F1F1F1;
     font-weight: bold;
 }
 
+
 @media (max-width: 620px){
     .title{
-        font-size: 60px;
+        font-size: 45px;
     } 
 
     .main{
@@ -93,3 +94,4 @@ color: #F1F1F1;
     }
 
 }
+
