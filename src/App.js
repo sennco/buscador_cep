@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 import './style.css';
-import axios from 'axios';
+
+
+import api from './services/api';
 
 function App() {
   const [input, setInput] = useState('');
   const [cep, setCep] = useState({});
+
 
   async function handleSearch() {
     if (input === "") {
@@ -14,7 +17,7 @@ function App() {
     }
 
     try {
-      const response = await axios.get(`http://localhost:3001/ws/${input}/json`);
+      const response = await api.get(`${input}/json`);
       setCep(response.data);
       setInput('');
     } catch {
